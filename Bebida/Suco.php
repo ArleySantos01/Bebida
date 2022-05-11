@@ -1,38 +1,38 @@
 <?php
-    require_once 'Bebida.php';
+	require_once 'Bebida.php';
 
-    class Suco extends Bebida
-    {
-        private $sabor;
+	class Suco extends Bebida
+	{
+		private $sabor;
 
-        public function getSabor()
-        {
-            return $this->sabor;
-        }
+		public function getSabor()
+		{
+			return $this->sabor;
+		}
 
-        public function setSabor($sabor)
-        {
-            $this->sabor = $sabor;
-        }
-        
-        /*
-        abstract function mostrarBebida()
-        {
-            
-        }
-        */
+		public function setSabor($sabor)
+		{
+			$this->sabor = $sabor;
+		}
 
-        abstract function verificarPreco($preco)
-        {
-            if($preco < 2.5)
-            {
-                return 0;
-            }
+		public function mostrarBebida()
+		{
+			$informacoes = $this->nome + "<br/>" + "<br/>" + $this->preco 
+			+ "<br/>" + "<br/>" + $this->safra + "<br/>" + "<br/>" + $this->tipo;
+			return $informacoes;			
+		}
 
-            else
-            {
-                return 1;
-            }            
-        }
-    }
+		public function verificarPreco($preco)
+		{
+			if (preco < 2.5)
+			{
+				return 0;
+			}
+
+			else
+			{
+				return 1;
+			}
+		}
+	}
 ?>
