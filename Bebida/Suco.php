@@ -24,7 +24,7 @@
 
 		public function verificarPreco($preco)
 		{
-			if (preco < 2.5)
+			if ($preco < 2.5)
 			{
 				return 0;
 			}
